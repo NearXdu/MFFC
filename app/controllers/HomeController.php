@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: crlt_
@@ -12,7 +13,34 @@ class HomeController extends BaseController
     {
         //$this->view=View::make('home')->with('article',Article::first());
         //echo "zx";
-        $article = Article::first();
-        require dirname(__FILE__).'/../views/home.php';
+        //$article = Article::first();
+        //require dirname(__FILE__) . '/../views/home.php';
+
+        Redis::set('zhang','xiao');
+        $key=Redis::get('zhang');
+
+
+        $this->view = View::make('home')->with('article',Article::first())
+
+            ->withTitle('MFFC :-D')
+
+            ->withFuckMe($key);
+
+
+
+//        $this->mail = Mail::to(["272434721@qq.com"])
+//
+//            ->from('crlt <crltZhang@sohu.com>')
+//
+//            ->title('test')
+//
+//            ->content('<h1>Hello~~</h1>');
+
     }
+
+
+
+
+
+
 }

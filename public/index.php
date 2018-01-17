@@ -8,12 +8,16 @@
 
 
 use Illuminate\Database\Capsule\Manager as Capsule;
+
+define ("PUBLIC_PATH",__DIR__);
 require '../vendor/autoload.php';
 
+require PUBLIC_PATH."/../bootstrap.php";
 
-$capsule = new Capsule;
-$capsule->addConnection(require '../config/database.php');
+//$capsule = new Capsule;
+//$capsule->addConnection(require '../config/database.php');
+//
+//$capsule->bootEloquent();
 
-$capsule->bootEloquent();
-
-require '../config/routes.php';
+require BASE_PATH."/config/routes.php";
+//require '../config/routes.php';
