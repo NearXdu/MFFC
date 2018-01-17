@@ -8,7 +8,7 @@
 
 return [
     'host' => 'smtp.sohu.com',
-    'username' => 'crltZhang@sohu.com',
-    'password' => 'xiao5615226',
+    'username' => 'crltxxxx@sohu.com',
+    'password' => 'xxxx',
     'secure' => ''
 ];
